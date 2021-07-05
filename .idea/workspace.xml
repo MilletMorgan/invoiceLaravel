@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbedfdf6-2ffd-4316-a686-218295d5f0f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/invoiceLaravel/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-vue/src/api/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-vue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-vue/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoiceLaravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoiceLaravel/app/Http/Controllers/OrganisationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/app/Http/Controllers/OrganisationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoiceLaravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoiceLaravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoiceLaravel/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoiceLaravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +27,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/invoiceLaravel" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -131,10 +139,13 @@
       <path value="$PROJECT_DIR$/invoiceLaravel/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/invoiceLaravel/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/invoiceLaravel/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/invoiceLaravel/vendor/barryvdh/laravel-cors" />
     </include_path>
   </component>
   <component name="ProjectId" id="1tvkX1c9BXD21fih4tMewJk3SxY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -143,9 +154,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/invoiceLaravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client-vue/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.serve" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -157,10 +186,27 @@
       <updated>1623656987288</updated>
       <workItem from="1623656988629" duration="161000" />
       <workItem from="1625470214561" duration="1479000" />
+      <workItem from="1625472968570" duration="720000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/invoiceLaravel" />
+    </ignored-roots>
   </component>
 </project>

@@ -116,6 +116,7 @@
       <excludeFolder url="file://$MODULE_DIR$/invoiceLaravel/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/invoiceLaravel/vendor/barryvdh/laravel-debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/invoiceLaravel/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/invoiceLaravel/vendor/barryvdh/laravel-cors" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
