@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
@@ -17,13 +19,11 @@ class OrganisationController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Application|Factory|View
+     * @return Collection|Builder[]
      */
-    public function index(): View|Factory|Application
+    public function index(): array|Collection
     {
-       $organisations = Organisation::query()->with('missions')->get();
-
-       return view('organisation.index', ['organisations' => $organisations]);
+        return Organisation::query()->with('missions')->get();
     }
 
     /**
