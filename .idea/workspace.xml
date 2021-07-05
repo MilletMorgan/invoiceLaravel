@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbedfdf6-2ffd-4316-a686-218295d5f0f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client-vue/src/api/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-vue/src/views/organisation/Add.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-vue/src/views/organisation/Edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-vue/src/views/organisation/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-vue/src/views/organisation/Show.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invoiceLaravel/app/Http/Controllers/MissionLineController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-vue/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-vue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-vue/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client-vue/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoiceLaravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoiceLaravel/app/Http/Controllers/OrganisationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/app/Http/Controllers/OrganisationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoiceLaravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoiceLaravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoiceLaravel/app/Models/Mission.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/app/Models/Mission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoiceLaravel/app/Models/MissionLine.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/app/Models/MissionLine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoiceLaravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoiceLaravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoiceLaravel/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +30,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="first-migration" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -151,13 +159,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/invoiceLaravel/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/invoiceLaravel/app/Http/Controllers" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -186,7 +201,7 @@
       <updated>1623656987288</updated>
       <workItem from="1623656988629" duration="161000" />
       <workItem from="1625470214561" duration="1479000" />
-      <workItem from="1625472968570" duration="720000" />
+      <workItem from="1625472968570" duration="21601000" />
     </task>
     <servers />
   </component>

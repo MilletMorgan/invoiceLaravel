@@ -2,36 +2,18 @@
   <div id="nav">
     <router-link to="/">Home</router-link>
     |
-    <router-link to="/about">About</router-link>
+    <router-link to="/organisation">Get all</router-link>
+    |
+    <router-link :to="{name: 'Add'}">Add</router-link>
   </div>
-  {{ data }}
+
   <router-view/>
 </template>
 
 <script>
-import {api} from "@/api/config";
 
 export default {
   name: 'App',
-  data() {
-    return {
-      data: []
-    }
-  },
-  methods: {
-    async getData() {
-      try {
-        const response = await api.get('/organisations')
-        console.log(response)
-        this.data = response.data
-      } catch (e) {
-        console.error(e)
-      }
-    }
-  },
-  created() {
-    this.getData()
-  }
 }
 </script>
 

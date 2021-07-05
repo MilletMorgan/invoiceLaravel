@@ -20,7 +20,8 @@ class MissionLine extends Model
         'title',
         'quantity',
         'price',
-        'unity'
+        'unity',
+        'mission_id'
     ];
 
     public function mission()

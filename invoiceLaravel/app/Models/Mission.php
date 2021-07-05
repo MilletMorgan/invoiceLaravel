@@ -19,6 +19,8 @@ class Mission extends Model
         'title',
         'comment',
         'deposit',
+        'organisation_id',
+        'ended_at'
     ];
 
     public function organisation()

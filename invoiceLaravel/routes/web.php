@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\OrganisationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,4 +15,4 @@ use App\Http\Controllers\OrganisationController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('api/organisations', OrganisationController::class);
+
