@@ -1,3 +1,5 @@
+@include('layouts.app')
+
 <table style="border-collapse: collapse; width: 100%;">
     <tr>
         <th>Id</th>

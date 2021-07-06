@@ -20,6 +20,6 @@ Route::get('/', function () {
 });
 
 Route::resource('organisations', OrganisationController::class);
-Route::resource('missions', MissionController::class);
+Route::resource('organisations/{organisation}/missions', MissionController::class);
 
 Route::post('mission-lines', [MissionLineController::class, 'store'])->name('mission.create');

@@ -5,16 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb2d8f0d-dfde-490f-977b-a9adeddc687f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/invoiceLaravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/invoiceLaravel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MissionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganisationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganisationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MissionLine.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MissionLine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mission/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mission/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mission/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mission/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/organisation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/organisation/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organisation/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/organisation/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/organisation/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +34,9 @@
     <execution>
       <phar pharPath="$PROJECT_DIR$/../composer.phar" interpreterId="577dd471-4c98-48ba-8aa4-b4df04fdd182" />
     </execution>
+  </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/resources/views/organisation/show.blade.php" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -154,6 +165,7 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
     </include_path>
   </component>
   <component name="ProjectId" id="1s2jOH7qxEZIQgkyUZ1ZfOBF95k" />
@@ -171,7 +183,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../client-vue" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="ReaderModeSettings">
@@ -204,7 +216,8 @@
       <workItem from="1623657156385" duration="930000" />
       <workItem from="1623916641338" duration="610000" />
       <workItem from="1625471697534" duration="1261000" />
-      <workItem from="1625567138342" duration="5048000" />
+      <workItem from="1625567138342" duration="8589000" />
+      <workItem from="1625578070626" duration="9223000" />
     </task>
     <servers />
   </component>

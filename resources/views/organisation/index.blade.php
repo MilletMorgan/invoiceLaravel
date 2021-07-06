@@ -1,4 +1,6 @@
-<table style="border-collapse: collapse">
+@include('layouts.app')
+
+<table class="shadow" style="border-collapse: collapse">
     <tr>
         <th>Id</th>
         <th>Slug</th>
@@ -18,7 +20,7 @@
                 {{ $organisation->missions->map(fn ($mission) => $mission->title)->join(', ') }}
             </td>
             <td>
-                <a href="{{route('organisations.show', $organisation->id)}}">
+                <a href="{{route('organisations.show',  $organisation->id)}}">
                     SHOW
                 </a>
             </td>
@@ -28,45 +30,51 @@
 
 <div style="margin-top: 100px">
     <hr>
-    <h1>Ajouter une organisation</h1>
+    <h1 class="text-2xl mb-5">Ajouter une organisation</h1>
     <form method="POST" action="{{route('organisations.store')}}">
-    @csrf
+        @csrf
         <label>
             Slug
-            <input type="text" name="slug">
+            <br>
+            <input class="border rounded" type="text" name="slug">
         </label>
         <br>
         <br>
         <label>
             Name
-            <input type="text" name="name">
+            <br>
+            <input class="border rounded" type="text" name="name">
         </label>
         <br>
         <br>
         <label>
             Email
-            <input type="email" name="email">
+            <br>
+            <input class="border rounded" type="email" name="email">
         </label>
         <br>
         <br>
         <label>
             Tel
-            <input type="tel" name="tel">
+            <br>
+            <input class="border rounded" type="tel" name="tel">
         </label>
         <br>
         <br>
         <label>
             Address
-            <input type="text" name="address">
+            <br>
+            <input class="border rounded" type="text" name="address">
         </label>
         <br>
         <br>
         <label>
             Type
-            <input type="text" name="type">
+            <br>
+            <input class="border rounded" type="text" name="type">
         </label>
         <br>
         <br>
-        <button type="submit">Enregistrer</button>
+        <button class="border rounded p-3 transition bg-blue-300 hover:bg-blue-400" type="submit">Enregistrer</button>
     </form>
 </div>

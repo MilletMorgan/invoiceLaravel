@@ -33,6 +33,9 @@ class OrganisationController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        /**
+         * @var Organisation organisation
+         */
         Organisation::create([
             'id' => Str::uuid(),
             'slug' => $request->slug,

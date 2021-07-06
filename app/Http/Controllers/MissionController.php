@@ -25,25 +25,25 @@ class MissionController extends Controller
         return view('mission.index', ['missions' => $missions]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return RedirectResponse
-     */
-    public function store(Request $request): RedirectResponse
+  /**
+   * Store a newly created resource in storage.
+   *
+   * @param Request $request
+   * @param Organisation $organisation
+   * @return RedirectResponse
+   */
+    public function store(Request $request, Organisation $organisation): RedirectResponse
     {
-        $mission = Mission::create([
+        $mission = $organisation->missions()->create([
             'id' => Str::uuid(),
-            'reference' => $request->reference,
-            'organisation_id' => $request->organisation_id,
-            'title' => $request->title,
-            'comment' => $request->comment,
-            'deposit' => $request->deposit,
-            'ended_at' => $request->ended_at
+            'reference' => $request->input('reference'),
+            'title' => $request->input('title'),
+            'comment' => $request->input('comment'),
+            'deposit' => $request->input('deposit'),
+            'ended_at' => $request->input('ended_at')
         ]);
 
-        $mission->missionLines()->createMany($request->mission_lines);
+        $mission->missionLines()->createMany($request->input('mission_lines'));
 
         return redirect()->route('missions.index');
     }
