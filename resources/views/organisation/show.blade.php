@@ -81,7 +81,7 @@
   </div>
   <div class="col-span-1">
     <h1 class="text-3xl mb-5">Ajouter une mission</h1>
-    <form method="POST" action="{{route('missions.store', ['organisation' => $organisation])}}">
+    <form method="POST" action="{{route('missions.store', ['organisation' => $organisation->id])}}">
       @csrf
       <label>
         Reference

@@ -45,7 +45,7 @@ class MissionController extends Controller
 
         $mission->missionLines()->createMany($request->input('mission_lines'));
 
-        return redirect()->route('missions.index');
+        return redirect()->route('organisations.index');
     }
 
     /**
