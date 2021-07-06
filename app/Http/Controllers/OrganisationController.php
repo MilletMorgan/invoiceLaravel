@@ -5,13 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Models\Organisation;
 
@@ -20,53 +16,44 @@ class OrganisationController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Collection|Builder[]
+     * @return Application|Factory|View
      */
-    public function index(): array|Collection
+    public function index(): Application|Factory|View
     {
-        return Organisation::query()
-            ->with('missions')
-            ->get();
+        $organisations = Organisation::all();
+
+        return view('organisation.index', ['organisations' => $organisations]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return Builder|Model
+     * @return RedirectResponse
      */
-    public function store(Request $request): Model|Builder
+    public function store(Request $request): RedirectResponse
     {
-        return Organisation::query()
-            ->create([
-                'id' => Str::uuid(),
-                'slug' => $request->slug,
-                'name' => $request->name,
-                'email' => $request->email,
-                'tel' => $request->tel,
-                'address' => $request->address,
-                'type' => $request->type
-            ]);
+        Organisation::create([
+            'id' => Str::uuid(),
+            'slug' => $request->slug,
+            'name' => $request->name,
+            'email' => $request->email,
+            'tel' => $request->tel,
+            'address' => $request->address,
+            'type' => $request->type
+        ]);
+
+        return redirect()->route('organisations.index');
     }
-
-
-    public function show(string $id): Model|\Illuminate\Database\Query\Builder|null
-    {
-        return DB::table('organisations')
-            ->where('id', $id)
-            ->first();
-    }
-
 
     /**
      * @param Request $request
      * @param string $id
-     * @return int
+     * @return RedirectResponse
      */
-    public function update(Request $request, string $id): int
+    public function update(Request $request, string $id): RedirectResponse
     {
-        return DB::table('organisations')
-            ->where('id', $id)
+         Organisation::where('id', $id)
             ->update([
                 'slug' => $request->slug,
                 'name' => $request->name,
@@ -75,20 +62,35 @@ class OrganisationController extends Controller
                 'address' => $request->address,
                 'type' => $request->type
             ]);
+
+        return redirect()->route('organisations.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param string $id
+     * @return Application|Factory|View
+     */
+    public function show(string $id): View|Factory|Application
+    {
+        $organisation = Organisation::find($id);
+
+        return view('organisation.show', ['organisation' => $organisation]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param string $id
-     * @return void
+     * @return RedirectResponse
      */
-    public function destroy(string $id): void
+    public function destroy(string $id): RedirectResponse
     {
-        $organisation = DB::table('organisations')
-            ->where('id', $id)
-            ->first();
+        $organisation = Organisation::find($id);
 
         $organisation->delete();
+
+        return redirect()->route('organisations.index');
     }
 }

@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mission;
-use App\Models\MissionLine;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Organisation;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class MissionController extends Controller
@@ -15,20 +16,22 @@ class MissionController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return Application|Factory|View
      */
-    public function index()
+    public function index(): View|Factory|Application
     {
-        //
+        $missions = Mission::all();
+
+        return view('mission.index', ['missions' => $missions]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return Response
+     * @return RedirectResponse
      */
-    public function store(Request $request): Response
+    public function store(Request $request): RedirectResponse
     {
         $mission = Mission::create([
             'id' => Str::uuid(),
@@ -42,40 +45,56 @@ class MissionController extends Controller
 
         $mission->missionLines()->createMany($request->mission_lines);
 
-        return Response($mission);
+        return redirect()->route('missions.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param Mission $mission
-     * @return void
+     * @param string $id
+     * @return Application|Factory|View
      */
-    public function show(Mission $mission)
+    public function show(string $id): View|Factory|Application
     {
-        //
+        $mission = Mission::find($id);
+
+        return view('mission.show', ['mission' => $mission]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Mission $mission
-     * @return Response
+     * @param string $id
+     * @return RedirectResponse
      */
-    public function update(Request $request, Mission $mission)
+    public function update(Request $request, string $id): RedirectResponse
     {
-        //
+        Mission::where('id', $id)
+            ->update([
+                'reference' => $request->reference,
+                'organisation_id' => $request->organisation_id,
+                'title' => $request->title,
+                'comment' => $request->comment,
+                'deposit' => $request->deposit,
+                'ended_at' => $request->ended_at
+            ]);
+
+        return redirect()->route('missions.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Mission $mission
-     * @return Response
+     * @param string $id
+     * @return RedirectResponse
      */
-    public function destroy(Mission $mission)
+    public function destroy(string $id): RedirectResponse
     {
-        //
+        $mission = Organisation::find($id);
+
+        $mission->delete();
+
+        return redirect()->route('missions.index');
     }
 }
