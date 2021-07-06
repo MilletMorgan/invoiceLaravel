@@ -31,14 +31,16 @@ class MissionController extends Controller
     public function store(Request $request): Response
     {
         $mission = Mission::create([
-                'id' => Str::uuid(),
-                'reference' => $request->reference,
-                'organisation_id' => $request->organisation_id,
-                'title' => $request->title,
-                'comment' => $request->comment,
-                'deposit' => $request->deposit,
-                'ended_at' => $request->ended_at
-            ]);
+            'id' => Str::uuid(),
+            'reference' => $request->reference,
+            'organisation_id' => $request->organisation_id,
+            'title' => $request->title,
+            'comment' => $request->comment,
+            'deposit' => $request->deposit,
+            'ended_at' => $request->ended_at
+        ]);
+
+        $mission->missionLines()->createMany($request->mission_lines);
 
         return Response($mission);
     }

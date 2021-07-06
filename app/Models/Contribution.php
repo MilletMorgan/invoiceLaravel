@@ -5,27 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MissionLine extends Model
+class Contribution extends Model
 {
     use HasFactory;
+    use HasUuid;
 
     public $incrementing = false;
 
     protected $keyType = 'uuid';
 
-    public $timestamps = false;
-
     protected $fillable = [
         'id',
-        'title',
-        'quantity',
         'price',
-        'unity',
-        'mission_id'
+        'title',
+        'comment',
+        'created_at',
     ];
 
-    public function mission()
+    public function organisation()
     {
-        return $this->belongsTo(Mission::class);
+        return $this->belongsTo(Organisation::class);
     }
 }

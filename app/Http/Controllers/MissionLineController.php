@@ -29,22 +29,10 @@ class MissionLineController extends Controller
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return Response
      */
     public function store(Request $request): Response
     {
-        $temp = Str::uuid();
 
-        $missionLines = MissionLine::create([
-            'id' => $temp,
-            'title' => $request->title,
-            'quantity' => $request->quantity,
-            'price' => $request->price,
-            'unity' => $request->unity,
-            'mission_id' => $request->mission_id
-        ]);
-
-        return Response($missionLines::find($temp));
     }
 
     /**
