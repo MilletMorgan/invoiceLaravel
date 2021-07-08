@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\MissionLineController;
 use App\Http\Controllers\OrganisationController;
+use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Route;
 
@@ -18,32 +19,41 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/auth/redirect', function () {
+Route::get('/', function () {
+  return [
+    'user_connecte' => Auth::user(),
+    'users' => User::all()
+  ];
+});
+
+Route::get('/login/redirect', function () {
   return Socialite::driver('github')->redirect();
 });
 
-Route::get('/auth/callback', function () {
-  $user = Socialite::driver('github')->user();
+Route::get('/login/callback', function () {
+  $githubUser = Socialite::driver('github')
+    ->user();
 
-  // OAuth 2.0 providers...
-  $token = $user->token;
-  $refreshToken = $user->refreshToken;
-  $expiresIn = $user->expiresIn;
+  $databaseUser = User::query()
+    ->firstOrNew([
+        'email' => $githubUser->getEmail()]
+    );
 
-  // OAuth 1.0 providers...
-  $token = $user->token;
-  $tokenSecret = $user->tokenSecret;
+  $databaseUser->fill([
+    'name' => $githubUser->getName() ?? $githubUser->getNickname(),
+    'avatar_url' => $githubUser->getAvatar()
+  ]);
 
-  // All providers...
-  $user->getId();
-  $user->getNickname();
-  $user->getName();
-  $user->getEmail();
-  $user->getAvatar();
+  Auth::login($databaseUser);
+
+  return redirect('/');
 });
 
-Route::get('public/github/callback', [AuthenticationController::class, 'handleGithubCallback'])->name('callback.github');
-Route::get('public/github', [AuthenticationController::class, 'redirectToGithub'])->name('register.github');
+Route::get('/logout', function () {
+  Auth::logout();
+
+  return redirect('/');
+});
 
 Route::middleware('auth')->group(function () {
   Route::prefix('/auth')->group(function () {

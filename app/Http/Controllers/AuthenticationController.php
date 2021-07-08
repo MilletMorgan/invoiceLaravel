@@ -14,6 +14,11 @@ use League\Flysystem\Exception;
 
 class AuthenticationController extends Controller
 {
+  public function login(): Factory|View|Application
+  {
+    return \view('public.login');
+  }
+
   /**
    * @return \Symfony\Component\HttpFoundation\RedirectResponse
    */

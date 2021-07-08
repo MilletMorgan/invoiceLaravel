@@ -15,6 +15,7 @@ class AddMissionLines extends Migration
     {
         Schema::create('mission_lines', function (Blueprint $table) {
             $table->uuid('id')->unique();
+            $table->uuid('mission_id');
             $table->foreign('mission_id')->references('id')->on('missions');
             $table->string('title');
             $table->integer('quantity');

@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb2d8f0d-dfde-490f-977b-a9adeddc687f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/invoiceLaravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/invoiceLaravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mission/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/mission/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mission/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/mission/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organisation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/organisation/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organisation/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/organisation/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +170,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client-vue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../laravel/authLaravel" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -220,7 +213,8 @@
       <workItem from="1625471697534" duration="1261000" />
       <workItem from="1625567138342" duration="8589000" />
       <workItem from="1625578070626" duration="10883000" />
-      <workItem from="1625674879465" duration="4017000" />
+      <workItem from="1625674879465" duration="4566000" />
+      <workItem from="1625756024949" duration="1005000" />
     </task>
     <servers />
   </component>
