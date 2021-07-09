@@ -20,7 +20,7 @@ class OrganisationController extends Controller
      */
     public function index(): Application|Factory|View
     {
-        return view('organisation.index', ['organisations' => Organisation::all()]);
+        return view('auth.organisation.index', ['organisations' => Organisation::all()]);
     }
 
     /**
@@ -77,7 +77,7 @@ class OrganisationController extends Controller
     {
         $organisation = Organisation::find($id);
 
-        return view('organisation.show', ['organisation' => $organisation]);
+        return view('auth.organisation.show', ['organisation' => $organisation]);
     }
 
     /**

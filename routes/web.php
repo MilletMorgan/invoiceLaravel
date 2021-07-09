@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\MissionLineController;
 use App\Http\Controllers\OrganisationController;
@@ -19,9 +20,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/users', function () {
   return [
-    'user_connecte' => Auth::user(),
+    'user_connected' => Auth::user(),
     'users' => User::all()
   ];
 });
@@ -31,18 +34,16 @@ Route::get('/login/redirect', function () {
 });
 
 Route::get('/login/callback', function () {
-  $githubUser = Socialite::driver('github')
-    ->user();
+  $githubUser = Socialite::driver('github')->user();
 
-  $databaseUser = User::query()
-    ->firstOrNew([
-        'email' => $githubUser->getEmail()]
-    );
+  $databaseUser = User::query()->firstOrNew(['email' => $githubUser->getEmail()]);
 
-  $databaseUser->fill([
-    'name' => $githubUser->getName() ?? $githubUser->getNickname(),
-    'avatar_url' => $githubUser->getAvatar()
-  ]);
+  $databaseUser
+    ->fill([
+      'name' => $githubUser->getName() ?? $githubUser->getNickname(),
+      'avatar_url' => $githubUser->getAvatar()
+    ])
+    ->save();
 
   Auth::login($databaseUser);
 
@@ -55,11 +56,7 @@ Route::get('/logout', function () {
   return redirect('/');
 });
 
-Route::middleware('auth')->group(function () {
-  Route::prefix('/auth')->group(function () {
-    Route::resource('organisations', OrganisationController::class);
-    Route::resource('organisations/{organisation}/missions', MissionController::class);
+Route::resource('organisations', OrganisationController::class)->middleware('auth');
+Route::resource('organisations/{organisation}/missions', MissionController::class)->middleware('auth');
 
-    Route::post('mission-lines', [MissionLineController::class, 'store'])->name('mission.create');
-  });
-});
+Route::post('mission-lines', [MissionLineController::class, 'store'])->name('mission.create')->middleware('auth');

@@ -1,6 +1,6 @@
 @include('layouts.app')
 
-<table class="shadow" style="border-collapse: collapse">
+<table class="shadow w-full" style="border-collapse: collapse">
     <tr>
         <th>Id</th>
         <th>Slug</th>
